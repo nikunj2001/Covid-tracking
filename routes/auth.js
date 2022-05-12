@@ -2,7 +2,7 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const router = express.Router();
 const jwt = require("jsonwebtoken");
-const covidTracker = require("../models/User");
+const covidTracker = require("../models/user");
 const finduser = require("../middleware/finduser");
 const secret = "LetsHaveSomeFunTonight...!!!";
 

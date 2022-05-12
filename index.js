@@ -18,6 +18,6 @@ if (process.env.NODE_ENV === 'production') {
     response.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
   });
 }
-app.listen(port, () => {
-  console.log(`iNotebook is lisitening at http://localhost:${port}`);
+app.listen(process.env.PORT || 3000, function () {
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
